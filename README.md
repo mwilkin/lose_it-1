@@ -4,7 +4,7 @@
 
 ## Description
 
-Health & Fitness Tracker
+Lose It
 Create an application that allows users to track aspects of their health. This could include diet, exercise, water intake, weight, stress levels, moods, productivity levels, remembering to take vitamins or medication, time spent outside, a combination of several, or any other metric of your choosing!
 
 Spend the first part of your day planning out your application with your partner, and drafting additional stories for features you'd like to explore. Again, make use of this time to create an awesome portfolio piece. Peruse other health-focused websites and applications for inspiration, such as MyFitnessPal, RunKeeper, FitDay, LoseIt, MoodTracker, MoodPanda, or any other of the countless health-centric websites and applications available.
@@ -22,7 +22,8 @@ Below are some potential user stories for a calorie-tracking application. But ag
 
 ## Installation
 
-* `git clone https://github.com/maldonmeehan/health-tracker.git`
+* `git clone https://github.com/matthewgiem/lose_it.git`
+* `postgres`
 * `gem install rails`
 * `bundle install`
 * `rake db:create`
