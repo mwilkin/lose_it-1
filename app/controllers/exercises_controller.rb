@@ -19,12 +19,12 @@ class ExercisesController < ApplicationController
   end
 
   def show
-    
+
   end
 
   private
   def exercise_params
-    params.require(:exercise).permit(:description, :type, :calories, :date)
+    params.require(:exercise).permit(:description, :activity, :calories, :date)
   end
 
   def find_exercise

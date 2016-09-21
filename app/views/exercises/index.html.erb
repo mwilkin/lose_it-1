@@ -2,7 +2,7 @@
 
 <ul>
   <% @exercises.each do |exercise| %>
-    <li><%= link_to exercise.description, exercise_path(exercise) %> | exercise.type | exercise.calories | exercise.date </li>
+    <%= render "exercise", :exercise => exercise %>
   <% end %>
 </ul>
 
