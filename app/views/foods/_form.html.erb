@@ -1,0 +1,11 @@
+<%= form_for @food do |f| %>
+<%= render "layouts/errors", :object => @food %>
+  <%= f.label :description %>
+  <%= f.text_field :description %><br>
+  <%= f.select :meal, [['Breakfast','breakfast'],['Lunch','lunch'],['Dinner','dinner']] %><br>
+  <%= f.label :calories %>
+  <%= f.text_field :calories %><br>
+  <%= f.label :date %>
+  <%= f.date_field :date %><br>
+  <%= f.submit %>
+<% end %>

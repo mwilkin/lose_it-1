@@ -1,0 +1,11 @@
+<h2>home page for food</h2>
+
+<ul>
+  <% @foods.each do |food| %>
+    <%= render "food", :food => food %>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to "New Food", new_food_path %>
