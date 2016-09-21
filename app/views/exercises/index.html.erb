@@ -1,0 +1,11 @@
+<h2>home page for exercise</h2>
+
+<ul>
+  <% @exercises.each do |exercise| %>
+    <li><%= link_to exercise.description, exercise_path(exercise) %> | exercise.type | exercise.calories | exercise.date </li>
+  <% end %>
+</ul>
+
+<hr>
+
+<%= link_to "New Exercise", new_exercise_path %>
