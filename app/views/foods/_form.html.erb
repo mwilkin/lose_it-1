@@ -1,4 +1,4 @@
-<%= form_for @food do |f| %>
+<%= form_for @food, remote: true do |f| %>
 <%= render "layouts/errors", :object => @food %>
   <%= f.label :description %>
   <%= f.text_field :description %><br>

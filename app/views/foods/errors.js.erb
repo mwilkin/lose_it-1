@@ -1,0 +1,2 @@
+$('#errors').remove();
+$('#new_food').before('<%= j render("layouts/errors", :object => @food)%>');

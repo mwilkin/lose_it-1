@@ -17,7 +17,8 @@ class ExercisesController < ApplicationController
         format.html { exercises_path }
         format.js
       else
-        render :new
+        format.html { render :new }
+        format.js { render :errors }
       end
     end
   end

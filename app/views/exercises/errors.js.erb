@@ -1,0 +1,2 @@
+$('#errors').remove();
+$('#new_exercise').before('<%= j render("layouts/errors", :object => @exercise)%>');

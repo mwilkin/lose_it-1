@@ -1,16 +1,16 @@
 <h2 id="center">Home Page</h2>
 <div class="row">
-  <div class="col-sm-6" id="exercise_list">
+  <div class="col-sm-6">
     <h3>Exercise</h3>
-    <ul>
+    <ul id="exercise_list">
       <% @exercises.each do |exercise| %>
         <%= render "exercise", :exercise => exercise %>
       <% end %>
     </ul>
   </div>
-  <div class="col-sm-6" id="food_list">
+  <div class="col-sm-6">
     <h3>Food</h3>
-    <ul>
+    <ul id="food_list">
       <% @foods.each do |food| %>
         <%= render "food", :food => food %>
       <% end %>
