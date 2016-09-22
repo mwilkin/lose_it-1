@@ -18,6 +18,7 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'launchy'
+  gem 'poltergeist'
   gem 'pry'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
