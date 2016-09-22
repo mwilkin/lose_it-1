@@ -1,4 +1,4 @@
-<%= form_for @exercise do |f| %>
+<%= form_for @exercise, remote: true do |f| %>
 <%= render "layouts/errors", :object => @exercise %>
   <%= f.label :description %>
   <%= f.text_field :description %><br>

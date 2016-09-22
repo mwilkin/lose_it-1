@@ -11,10 +11,13 @@ class FoodsController < ApplicationController
 
   def create
     @food = current_user.foods.build(food_params)
-    if @food.save(food_params)
-      redirect_to foods_path
-    else
-      render :new
+    respond_to do |format|
+      if @food.save(food_params)
+        format.html { redirect_to exercises_path }
+        format.js
+      else
+        render :new
+      end
     end
   end
 

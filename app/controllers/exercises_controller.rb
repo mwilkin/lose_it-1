@@ -3,6 +3,7 @@ class ExercisesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   def index
     @exercises = Exercise.all
+    @foods = Food.all
   end
 
   def new
@@ -11,10 +12,13 @@ class ExercisesController < ApplicationController
 
   def create
     @exercise = current_user.exercises.build(exercise_params)
-    if @exercise.save(exercise_params)
-      redirect_to exercises_path
-    else
-      render :new
+    respond_to do |format|
+      if @exercise.save(exercise_params)
+        format.html { exercises_path }
+        format.js
+      else
+        render :new
+      end
     end
   end
 

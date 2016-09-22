@@ -1,11 +1,23 @@
-<h2>home page for exercise</h2>
-
-<ul>
-  <% @exercises.each do |exercise| %>
-    <%= render "exercise", :exercise => exercise %>
-  <% end %>
-</ul>
-
+<h2 id="center">Home Page</h2>
+<div class="row">
+  <div class="col-sm-6" id="exercise_list">
+    <h3>Exercise</h3>
+    <ul>
+      <% @exercises.each do |exercise| %>
+        <%= render "exercise", :exercise => exercise %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="col-sm-6" id="food_list">
+    <h3>Food</h3>
+    <ul>
+      <% @foods.each do |food| %>
+        <%= render "food", :food => food %>
+      <% end %>
+    </ul>
+  </div>
+</div>
 <hr>
 
-<%= link_to "New Exercise", new_exercise_path %>
+<%= link_to "New Exercise", new_exercise_path, remote: true, id: "new_exercise_link" %><br>
+<%= link_to "New Food", new_food_path, remote: true, id: "new_food_link" %>
